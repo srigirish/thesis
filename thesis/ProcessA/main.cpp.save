@@ -1,0 +1,45 @@
+#include <string.h>
+#include "SPI.h"
+#include "MFRC522.h"
+#define SS_PIN 53
+#define RST_PIN 49
+#include "thread.h"
+#include <stdlib.h>
+
+static char tx_stack1[THREAD_STACKSIZE_MAIN];
+static char rx_stack1[THREAD_STACKSIZE_MAIN];
+
+static void on_rx(PLiFi *lifi, const uint8_t *msg, uint8_t len);
+static void control_message(const uint8_t *msg, uint8_t len);
+static void request_message(const uint8_t *msg, uint8_t len);
+static void on_message_for_me(const uint8_t *msg, uint8_t len);
+
+PLiFi lifi1(22, 0, on_rx, NULL);
+
+void *tx_loop(void *arg)
+{
+    digitalWrite(13,HIGH);
+    delay(500);
+    digitalWrite(13,LOW);
+    delay(500);
+    return NULL;
+}
+void setup()
+{
+    thread_create(tx_stack1, sizeof(tx_stack1), THREAD_PRIORITY_MAIN - 1,
+                  THREAD_CREATE_STACKTEST, tx_loop, &lifi1, "tx1");
+    delay(1);
+
+    pinMode(13,OUTPUT);
+
+al.println("setup() done");
+}
+
+boolean startSensor = false;
+boolean endSensor = false;
+boolean messageSent = false;
+
+void loop()
+{
+
+}
