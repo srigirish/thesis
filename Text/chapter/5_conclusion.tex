@@ -1,0 +1,18 @@
+\chapter{Conclusions and Future Work}
+\label{ch:conclusions}
+
+\section{Summary}
+\label{sec:summary}
+Rapid developments in Industry 4.0 led to the utilization of the Internet of Things for smart factories which resulted in the addition of several new features such as parallel threading, digital twins, and firmware updates. Firstly, these features were brought together in this work to provide a proof of concept for a Digital-Physical system pair. The concepts of Digital Twin and Firmware Updates for embedded systems were introduced.
+
+Secondly, a thorough literature survey was conducted to understand the current state of the art for such systems, and the research gap was described, reaching the conclusion that individual firmware update methods are used by several industries, or the update files are broadcasted to an entire network of devices. However, there exists a research gap on simultaneous \acrshort{OTA} firmware update methods. Furthermore, limited research exists on the concept of the Digital-Physical system pair introduced in this work, which can be extremely useful in many industries in general, and the manufacturing industry in particular.
+
+Thirdly, the system described for this thesis was developed using the Factory Planning Laboratory at the \acrlong{ILM} at OvGU. The hardware and software components of the system, as well as the combination of the physical system with the digital twin to conduct monitoring and maintenance of the system, were described.
+
+Finally, two experiments were conducted to provide proof of feasibility and measurability of the system. In Experiment 1, the increase in the firmware update speed of the modules due to the simultaneous update method was measured. In Experiment 2, the efficiency of the system for Layout 1 was calculated by comparing the runtime of each module to the total time. %Experiment 3 measured the success rate of the firmware update to find out potential changes in the control logic of the modules.
+
+\section{Future Work}
+\label{sec:futurework}
+The work carried out for the development of a physical system and its associated digital twin in this thesis has a few limitations that can be addressed in the future. One of the limitations is the lack of a true remote digital twin. The digital twin demonstrated here runs on the local Linux host running a \acrshort{CoAP} file server. This can be improved by providing connectivity to the Internet using DHCPv6 prefix delegation to the ESP32 WiFi nodes.
+
+The Digital Twin is only used for monitoring the system without any feedback to the physical modules. This is not possible using \acrshort{CoAP} as it is a client-server based protocol. By implementing the LWM2M protocol in this system, each module can also be remotely controlled along with being remotely monitored.

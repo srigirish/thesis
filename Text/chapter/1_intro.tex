@@ -1,0 +1,47 @@
+\chapter{Introduction and Motivation}
+\label{ch:introduction}
+The industrial revolution which started in the late 18th century was the cornerstone of the automation of manufacturing processes. Going through many changes, the current generation of production processes has arrived at what is termed the fourth industrial revolution, better known as Industry 4.0. The aim of Industry 4.0 is to digitize the entire manufacturing process with minimum human intervention \cite{grznar2020modeling}. The rapid change in technological growth and smart automation has given rise to heavily interconnected networks of production layouts that can be simulated using \acrfull{CPS}. \acrshort{CPS} are computer systems that use computer-based algorithms to control a mechanism. \acrshort{CPS} are an integral part of Industry 4.0, using the \acrfull{IoT} to communicate with each other. 
+
+One of the major functionalities of the \acrshort{CPS} is the ability to update their firmware remotely. This concept is called \acrfull{OTA} Firmware Update. Safety-Aware \acrlong{OTA} firmware updates have been implemented and evaluated in the Industry 4.0 Learning Laboratory built by the ILM department at OvGU Magdeburg, which is comprised of factory modules in a static layout \cite{Karri_2021}. This thesis aims to build on the work carried out by them.
+
+To keep up with the growing diversity of demand, factories need to constantly update their layout to create new manufacturing paths, which leads to a dynamic factory layout. These changes in the factory layout need to be detected remotely, due to a possible unavailability of control engineers at the factory site. This calls for continuous monitoring of the factory modules remotely, and representation of the factory in a virtual environment. The control logic of these dynamic layouts may also need regular updates, making it a time-consuming and tedious process if each factory module is updated individually. This thesis aims to tackle these problems by developing a digital twin and introducing simultaneous \acrshort{OTA} updates.
+\section{Motivation}
+\label{sec:motivation}
+
+Simultaneous \acrshort{OTA} update for multiple devices is still an area of research in many industries. It is imperative for those with tens or hundreds of deployed \acrfull{MCU} to explore this technology, as it can help save a large amount of time and resources.
+
+A digital twin can assist this process by constantly being connected to the factory layout and working in tandem with it so that any changes in the manufacturing process can immediately be detected and updated.
+
+The combination of a digital twin and simultaneous \acrshort{OTA} firmware updates is an asset to any industry as it supports both the surveillance of the system and its maintenance remotely. Many such systems have already been implemented in various industries such as automobiles, healthcare devices, and agricultural sectors. Current research in Industry 4.0 within the context of factory processes is majorly limited to either tracking or maintenance, as described in the upcoming sections. The process of continuous monitoring of a factory layout has been theorized but there is a definite lack of a comprehensive demonstration of the monitoring, maintenance, and update of a factory layout.
+
+	\section{Aim of this thesis}
+ Manufacturing processes are constantly being changed to meet the demands of the consumer market. To meet the requirements of the ever-changing methods, processes, and products, the industry needs to constantly monitor the ongoing processes and update them whenever necessary. 
+	
+ The aim of this thesis work is to provide the proof of concept for the above-described theory, by developing a physical-digital system pair and incorporating the concepts of Industry 4.0 such as real-time process updates and Over-The-Air Firmware Updates. The factory planning laboratory in the Institute of Logistics and Material Handling is utilized for implementation. Initially, a digital twin is developed using the available factory modules as the reference. Each factory module is equipped with a Nucleo-F767ZI \acrshort{MCU} board connected to an ESP32 for wireless connectivity, and a combined layout of conveyors, sliders, and turntables makes up the physical system. A CoAP server is used for status updates and storing the firmware images and is hosted on the same network as the digital twin. The physical system sends updates to this server over the network using CoAP messages. Each module is given the provision for an \acrshort{OTA} firmware update, and all modules can be simultaneously updated through WiFi using the functionality provided by the Digital Twin.
+
+ The system is evaluated based on simultaneous firmware update efficiency, speed, scalability, and process efficiency. Initially, each module is individually updated to calculate the update time for a single module. Following this, the entire system is updated using simultaneous updates through the digital twin to demonstrate the scalability of the system and measure the proportional increase in update speed. Finally, the process efficiency of the system is measured by tracking the uptime of each module and comparing it with the total uptime of the system.
+ 
+	\section{Structure of this thesis}
+This thesis is structured as follows.
+\begin{itemize}
+    \item Chapter 1 gives an introduction to the proposed work and the motivation behind it, as well as the aim of the thesis.
+    \item Chapter 2 provides the theoretical background of the different concepts put together in this thesis and outlines some of the related work that has been done in this field.
+    \item Chapter 3 describes the methodology of the thesis and provides a description of the different hardware and software setup utilized in this work.
+    \item Chapter 4 presents the evaluation and provides a proof of concept for the work described in this thesis.
+    \item Chapter 5 summarizes the work and delves into some concepts that can be explored in the future.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	

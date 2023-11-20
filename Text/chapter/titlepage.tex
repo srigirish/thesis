@@ -1,0 +1,149 @@
+\begin{titlepage}
+  \thispagestyle{titlepage}
+  \begin{center}
+  {\LARGE \myuniversity}\\[5mm]
+  \begin{figure*}[h]
+   \hbox{}\hfill
+   \begin{minipage}[t]{12cm}
+			 \centering
+			 %\includegraphics[width=7cm]{logos/OVGU_SIGN_druck.eps}
+			 \includegraphics[width=12cm]{logos/INF_SIGN_druck.eps}
+   \end{minipage}
+   \hfill\hbox{}
+  \end{figure*}
+  {\large \myschool\\ \mydepartment}\\[10mm]
+  {\LARGE \kindOfThesis}\\[12mm]
+		%{\large\bf \titleOfThesis}\\[10mm]
+		{\Large\bf \titleOfThesis}\\[12mm]
+  \begin{tabular}{rl}
+  {\large submitted:} & {\large November 8, 2023}\\[2mm]	
+	
+  {\large by:} & {\large \myfirstname~\mylastname}{\large, 230061}\\[12mm]
+%   {\small \mydegree} \\[5mm]
+\end{tabular}
+
+  
+  \vspace{0.8cm}
+  \renewcommand{\arraystretch}{.9}
+  \begin{tabular}{cc}
+	\multicolumn{2}{c}{\small Advisers:} \\[1mm]
+	{\small Supervisor} & {\small Responsible Professor} \\[1mm]
+	{\large M. Sc. Vasu Dev Mukku} & {\large Prof. Dr. Mesut Günes} \\[1mm]
+	{\small Institute of Logistics and } 			 & {\small Institute for Intelligent Cooperating } \\
+	{\small Material Handling Systems} & {\small Systems - Faculty of Computer Science} \\
+	{\small \myuni} 			 & {\small \myuni} 	\\
+	{\small \myunistreet} 		 & {\small \myunistreet} \\
+	{\small \myunizipcity}		 & {\small \myunizipcity} \\ [6mm]
+    
+     \multicolumn{2}{c}{\small Responsible Professor} \\[1mm]
+    \multicolumn{2}{c}{{\large Dr.-Ing. Tobias Reggelin}} \\[1mm]
+    \multicolumn{2}{c}{\small Institute of Logistics and Material Handling Systems} \\
+    \multicolumn{2}{c}{\small \myuni} \\
+    \multicolumn{2}{c}{\small \myunistreet} \\
+    \multicolumn{2}{c}{\small \myunizipcity} \\
+	
+  \end{tabular}
+  
+		\renewcommand{\arraystretch}{1}
+  \end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{minipage}{.95\textwidth}
+\textbf{\mylastname,~\myfirstname:}\\
+\emph{\titleOfThesis}\\
+\kindOfThesis, \myuni \\
+\myplace, \myyear.
+\end{minipage}
+
+\cleardoublepage
+
+% =============================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Inhaltsverzeichnis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+%\listoffigures
+
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\listoftables
+
+%\addcontentsline{toc}{chapter}{Algorithmenverzeichnis}
+%\listofalgorithms
+%\todo{Anleitung Algorithmen schreiben: \url{http://en.wikibooks.org/wiki/LaTeX/Algorithms}}
+
+\cleardoublepage
+% =============================================================================
+
+\thispagestyle{plain}
+\phantomsection
+\section*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{spacing}{1.3}
+
+Cyber-Physical Systems (CPS) are computer systems that use computer-based algorithms to control a mechanism. CPS are an integral part of Industry 4.0, using the Internet of Things (IoT) to communicate with each other. One of the major functionalities of the CPS is the ability to update their firmware remotely. This concept is called Over-The-Air (OTA) Firmware Update. Safety-Aware Over-The-Air firmware updates have been implemented and tested in the Industry 4.0 Learning Laboratory [1], built by the ILM department at OvGU Magdeburg, which comprises of factory modules in a static layout. To keep up with the growing diversity of demand, factories need to constantly update their layout to create new manufacturing paths, which leads to a dynamic factory layout. These changes in the factory layout need to be detected remotely, due to a possible unavailability of control engineers at the factory site. The control logic of these dynamic layouts may also need regular updates, making it a time-consuming and tedious process if each factory module must be updated individually. This thesis aims to tackle this problem by introducing simultaneous OTA updates, assisted by a digital twin. Unity Engine is used to develop the digital twin and the physical system is continuously monitored by tracking the manufacturing process using CoAP messages and updated using the SUIT module. 
+\end{spacing}
+
+
+\cleardoublepage
+% =============================================================================
+
+
+% \thispagestyle{plain}
+% \phantom{.}
+% \vspace{70mm}
+
+% \begin{center}
+% 	\todo[inline]{This section is optional! It is basically an motivational cite for this work as it can be found in many books. Example is provided}
+% 	\textit{
+% 		\vspace{0.5cm}
+% 		The validation of clustering structures is \\
+% 		the most difficult and frustrating part of cluster analysis. \\ 
+% 		\vspace{0.5cm}
+% 		Without a strong effort in this direction, \\
+% 		cluster analysis will remain a black art 
+% 		accessible only to those \\
+% 		true believers who have experience and great courage.}
+% \end{center}
+% \begin{flushright}
+% %	\citet{Jain1988}
+% 	Anil K. Jain and Richard C. Dubes
+% \end{flushright}
+
+%\uselengthunit{mm}
+%textwidth=\printlength{\textwidth}\\
+%textheight=\printlength{\textheight}\\
+%top=\printlength{\top}\\
+
+% \cleardoublepage
+% =============================================================================
+
+
+\thispagestyle{plain}
+\section*{Acknowledgements}
+\begin{spacing}{1.25}
+Firstly, I would like to thank all those who supported and guided me in completing my master thesis.
+
+I would like to express my profound gratitude
+to my professors, Prof. Dr. Mesut Günes and Dr.-Ing. Tobias Reggelin for their advice, guidance and addressing all my queries quickly and promptly.
+
+I would also like to thank M.Sc. Vasu Dev Mukku for providing me with this
+topic, and allowing me to conduct this work at the Industry 4.0 Learning Laboratory at ILM, OvGU. I am thankful to him for his invaluable advice, guidance and suggestions throughout the course of
+this work.
+
+Last, but not the least, I am grateful to my parents and
+my brother for their love, support and encouragement, which enabled me to complete
+this work.
+
+Upon submitting this thesis, my long term association with Otto-von-Guericke
+University Magdeburg will come to an end.
+\end{spacing}
+
+\cleardoublepage
+% =============================================================================
+
+\setcounter{tocdepth}{2}
+\tableofcontents
