@@ -1,6 +1,6 @@
 #!/bin/sh
 
-   echo marshall! | sudo -S ip tuntap add riot1 mode tap user ${USER}
+   echo <sudo_pw> | sudo -S ip tuntap add riot1 mode tap user ${USER}
    sudo sysctl -w net.ipv6.conf.riot1.forwarding=1
    sudo sysctl -w net.ipv6.conf.riot1.accept_ra=0
    sudo ip link set riot1 up
